@@ -1,0 +1,105 @@
+/**
+ * Ditch that ugly Menlo font
+ */
+.commit-sha, .gfm-commit, .gfm-commit_range, .ref-name, .pipeline-number {
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,monospace;
+    font-weight: 400;
+}
+
+textarea.js-gfm-input,
+pre, code, kbd, samp,
+.mr-state-widget .label-branch,
+.monospace,
+.file-content.code pre code,
+.diff-table.code,
+table.code,
+.git-revision-dropdown .dropdown-content li:not(.dropdown-menu-empty-item) a {
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,monospace;
+}
+
+.file-content.code pre .line,
+.file-content.code .line-numbers a {
+    line-height: 1.66;
+}
+
+/**
+ * Customize white theme so it looks like Github's light them
+ */
+.code.white .cm,
+.code.white .c1,
+.code.white .c {
+    color: #909090;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.code.white .k,
+.code.white .kd,
+.code.white .nf {
+    font-weight: 400;
+    color: #cf222e;
+}
+
+.code.white .k + .nf {
+    color: teal;
+}
+
+.code.white .s {
+    color: #26569c;
+}
+
+.code.white .o {
+    font-weight: 400;
+}
+
+.code.white .kc {
+    font-weight: 400;
+    color: #da870b;
+}
+
+.code.white .na,
+.code.white .si,
+.code.white .kp {
+    color: #24292f;
+    font-weight: 400;
+}
+
+.code.white .err {
+    background-color: transparent;
+    color: #0a3069;
+}
+
+.code.white .s1,
+.code.white .s2,
+.code.white .nb {
+    color: #0550ae;
+}
+
+.code.white .nx {
+    color: #24292f;
+}
+
+.code.white .nt,
+.code.white .nc {
+    color: teal;
+    font-weight: 400;
+}
+
+.code.white .nt + .k {
+    color: teal;
+}
+
+.code.white .ss {
+    color: #8250df;
+}
+
+/**
+ * Lang-specific
+ */
+.code.white [lang='vue'] .na {
+    color: #8250df;
+}
+
+.code.white [lang='jsx'] .na {
+    color: #8250df;
+}
