@@ -1,25 +1,133 @@
 /**
  * Ditch that ugly Menlo font
  */
-.commit-sha, .gfm-commit, .gfm-commit_range, .ref-name, .pipeline-number {
-    font-family: ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,monospace;
+.commit-sha,
+.gfm-commit,
+.gfm-commit_range,
+.ref-name,
+.pipeline-number,
+.ci-table .branch-commit .ref-name {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, monospace;
     font-weight: 400;
 }
 
 textarea.js-gfm-input,
-pre, code, kbd, samp,
+pre,
+code,
+kbd,
+samp,
 .mr-state-widget .label-branch,
 .monospace,
 .file-content.code pre code,
 .diff-table.code,
 table.code,
-.git-revision-dropdown .dropdown-content li:not(.dropdown-menu-empty-item) a {
-    font-family: ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,monospace;
+.git-revision-dropdown .dropdown-content li:not(.dropdown-menu-empty-item) a,
+.gl-font-monospace,
+.job-log,
+.file-content.code .line-numbers a {
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, monospace;
 }
 
 .file-content.code pre .line,
 .file-content.code .line-numbers a {
     line-height: 1.66;
+    font-size: 13px;
+}
+
+/**
+ * Minor UI improvements
+ */
+li.issuable-status.d-none.d-sm-inline-block {
+    padding: 2px 8px;
+    border-radius: 24px;
+    background: #897be3;
+    text-transform: lowercase;
+    color: #ffffff;
+}
+
+.dropdown-menu-toggle:focus,
+.dropdown-menu-toggle:active,
+.gl-form-input:not(.form-control-plaintext):focus,
+.gl-form-input.form-control:not(.form-control-plaintext):focus,
+.search form.gl-form-input:not(.form-control-plaintext):focus,
+.search.search-active form.gl-form-input:not(.form-control-plaintext),
+.dropdown .gl-button.gl-button.btn-default:focus,
+.dropdown .gl-button.gl-button.btn-block.btn-default:focus {
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+    border: 1px solid #80bdff;
+    background: #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: none;
+}
+
+.gl-button.gl-button.btn-default:active,
+.gl-button.gl-button.btn-default.active,
+.gl-button.gl-button.btn-block.btn-default:active,
+.gl-button.gl-button.btn-block.btn-default.active {
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+    border: 1px solid #80bdff;
+}
+
+code {
+    padding: 2px 6px;
+    color: #4b4b4b;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+
+/**
+ * Make flashes stand-out
+ */
+.flash-container + .row-content-block {
+    background: #dff2e8ad !important;
+    border-radius: 8px;
+    border: 1px solid #8ce0a1 !important;
+    margin: 20px 0 !important;
+}
+
+.commit-description, .commit-row-description {
+    padding: 12px;
+    margin-top: 12px;
+    background: #dff2e8ad !important;
+    border-radius: 4px;
+    border: 1px solid #8ce0a1 !important;
+}
+
+
+/**
+ * Table
+ */
+.tree-holder .tree-table tr:hover:not(.tree-truncated-warning) td {
+    background-color: #f8f8f8;
+    background-clip: unset;
+    border-top: 1px solid #dbdbdb;
+}
+
+.tree-holder .tree-table tr:last-of-type {
+    border-bottom-color: unset;
+}
+
+.tree-holder .tree-table tr {
+    border-bottom: 0;
+    border-top: 0;
+}
+
+/**
+ * Terminal log colors
+ */
+.job-log {
+    background-color: #fbfbfb;
+    border: 1px solid #dbdbdb;
+    border-top: 0;
+    color: #2b2b2b;
+}
+.build-page .term-fg-yellow {
+    color: #d46e09;
+}
+.build-page .term-fg-l-green {
+    color: #13944d;
 }
 
 /**
@@ -35,6 +143,7 @@ table.code,
 
 .code.white .k,
 .code.white .kd,
+.code.white .kr,
 .code.white .nf {
     font-weight: 400;
     color: #cf222e;
